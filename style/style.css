@@ -1,0 +1,288 @@
+:root {
+    --bg-color: hsl(0, 0%, 100%);
+    --bg-tarjeta: hsl(227, 47%, 96%);
+    --card-facebook: hsl(208, 92%, 53%);
+    --card-twitter: hsl(203, 89%, 53%);
+    --card-instragram1: hsl(37, 97%, 70%);
+    --card-instragram2: hsl(329, 70%, 58%);
+    --card-youtube: hsl(348, 97%, 39%);
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --texto1: hsl(228, 12%, 44%);
+    --texto2: hsl(230, 17%, 14%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: .3s ease all;
+    color: var(--texto2);
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*HEADER*/
+
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .titulo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.titulo .total-seguidores {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+/*SWITCH*/
+
+.toggle-group {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.toggle {
+    background-color: hsl(230, 22%, 74%);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    transition: .3s ease all;
+}
+
+.toggle::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: hsl(225, 100%, 98%);
+    top: 3.5px;
+    left: 0;
+    right: unset;
+    margin: 0 2px;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.activo {
+    background: rgb(62, 140, 218);
+    background: linear-gradient(90deg, rgba(62, 140, 218, 1) 16%, rgba(62, 218, 130, 1) 87%);
+    transition: .3s ease all;
+}
+
+.activo::after {
+    right: 0;
+    left: unset;
+    background-color: hsl(232, 19%, 15%);
+}
+
+.toggle span {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+/*SECCIÓN SEGUIDORES*/
+
+.seguidores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.tarjeta {
+    text-align: center;
+    background-color: var(--bg-tarjeta);
+    border-radius: 8px;
+}
+
+.tarjeta::before {
+    content: "";
+    height: 3px;
+    display: block;
+}
+
+.tarjeta:nth-child(1)::before {
+    background-color: var(--card-facebook);
+}
+
+.tarjeta:nth-child(2)::before {
+    background-color: var(--card-twitter);
+}
+
+.tarjeta:nth-child(3)::before {
+    background-image: linear-gradient(to right, var(--card-instragram1) 0%, var(--card-instragram2) 100%);
+}
+
+.tarjeta:nth-child(4)::before {
+    background-color: var(--card-youtube);
+}
+
+.info-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.info-tarjeta .red-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-tarjeta .red-social img {
+    margin-right: 5px;
+}
+
+.info-tarjeta .seccion-tarjeta-seguidores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.seccion-tarjeta-seguidores .numero-seguidores {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.seccion-tarjeta-seguidores .titulo-seguidores {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.info-tarjeta .hoy {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sube {
+    color: var(--lime-green);
+}
+
+.baja {
+    color: var(--bright-red);
+}
+
+.info-tarjeta .hoy img {
+    margin-right: 5px;
+}
+
+
+/*OVERVIEW*/
+
+.overview {
+    margin-top: 40px;
+}
+
+.overview-titulo {
+    color: var(--texto1);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.card {
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: var(--bg-tarjeta);
+}
+
+.card-seccion-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--texto1);
+    font-weight: bold;
+}
+
+.card-seccion-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card-seccion-2 .card-numero {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.card-seccion-2 .card-porcentaje {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-seccion-2 .card-porcentaje img {
+    margin-right: 5px;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    margin-top: 30px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*TEMA OSCURO*/
+
+[data-theme="dark"] {
+    --bg-color: hsl(230, 17%, 14%);
+    --bg-tarjeta: hsl(228, 28%, 20%);
+    --texto1: hsl(228, 34%, 66%);
+    --texto2: hsl(0, 0%, 100%);
+}
