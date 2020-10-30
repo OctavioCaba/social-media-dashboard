@@ -1,3 +1,13 @@
+Dashboard de redes sociales
+
+Proyecto realizado con HTML, CSS y JS.
+
+Realizado con el fin de practicar estructura con HTML y estilización con CSS.
+
+Idea y recursos de Frontend Mentor. Programado por Octavio Caba.
+
+**********************************************************************************************************
+
 # Frontend Mentor - Social media dashboard with theme switcher
 
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)

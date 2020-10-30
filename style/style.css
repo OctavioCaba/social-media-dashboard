@@ -41,6 +41,13 @@ body {
     padding: 15px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
 }
 
 .header .titulo {
@@ -52,6 +59,23 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: normal;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .titulo .total-seguidores {
+        margin-bottom: 0;
+    }
+}
+
+.titulo {
+    border-bottom: 1px solid var(--texto2);
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        border: none;
+    }
 }
 
 
@@ -112,16 +136,28 @@ body {
 /*SECCIÓN SEGUIDORES*/
 
 .seguidores {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
     margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .seguidores {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+    }
 }
 
 .tarjeta {
     text-align: center;
     background-color: var(--bg-tarjeta);
     border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .tarjeta {
+        margin-bottom: 0;
+    }
 }
 
 .tarjeta::before {
@@ -214,15 +250,30 @@ body {
 }
 
 .overview-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .overview-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+    }
 }
 
 .card {
-    padding: 5px 20px;
+    padding: 20px;
     border-radius: 8px;
     background-color: var(--bg-tarjeta);
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 5px 20px;
+        margin-bottom: 0;
+    }
 }
 
 .card-seccion-1 {
